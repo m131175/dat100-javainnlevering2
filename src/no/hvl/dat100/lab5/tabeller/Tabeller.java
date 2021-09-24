@@ -71,12 +71,13 @@ public class Tabeller {
 	public static int[] reverser(int[] tabell) {
 		int arrLength = tabell.length;
 		int[] newArray = new int[arrLength];
+		int index = 0;
 		
-		for (int i = 0; i < arrLength; i++) {
-			newArray[arrLength - 1] = tabell[i];
-			arrLength--;
+		for (int i = arrLength - 1; i >= 0; i--) {
+			newArray[index] = tabell[i];
+			index++;
 		}
-		skrivUt(newArray);
+		
 		return newArray;
 	}
 
